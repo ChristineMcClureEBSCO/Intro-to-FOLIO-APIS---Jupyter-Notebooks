@@ -1,5 +1,3 @@
-folio_auth*
+folio_auth*.ipynb
 __pycache/**
-
-
 /__pycache__
