@@ -1,3 +1,2 @@
-folio_auth LSE1.ipynb
-folio_auth.ipynb
-__pycache*
+folio_auth*
+__pycache__/folio_auth.cpython-312.pyc
