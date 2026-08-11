@@ -1,3 +1,5 @@
 folio_auth*
-__pycache*
+__pycache/**
 
+
+/__pycache__
