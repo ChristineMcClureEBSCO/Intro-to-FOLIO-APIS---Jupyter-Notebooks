@@ -1,5 +1,3 @@
-.gitignore
 __pycache/**
 /__pycache__
-folio_auth*.pynb
-folio_auth.ipynb
+
