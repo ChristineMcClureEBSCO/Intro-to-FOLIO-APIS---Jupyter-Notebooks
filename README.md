@@ -29,7 +29,7 @@ For readers already comfortable with Python, git, and code editors. Order of ope
 1. Install Python 3.10+ from [python.org/downloads](https://www.python.org/downloads/) (Windows: check "Add Python to PATH").
 2. Install [VS Code](https://code.visualstudio.com/).
 3. In VS Code, install the [**Python**](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [**Jupyter**](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) extensions (both published by Microsoft).
-4. Close or download the notebooks from:
+4. Clone or download the notebooks from:
    - Go to `https://github.com/ChristineMcClureEBSCO/Intro-to-FOLIO-APIS---Jupyter-Notebooks`
 5. Open in VS Code.
 6. Open a terminal in VS Code (**Terminal > New Terminal**) and run:
@@ -58,7 +58,11 @@ By the end of this guide you'll have:
 5. The ability to open a `.ipynb` notebook file, install the required libraries, and run code in it
 
 ---
+### A note on local environments
 
+If you encounter any errors while installing Python or the libraries needed for these notebooks, it may be best to get assistance from someone locally at your organization who can investigate the issue with you in real time. 
+
+---
 ### Step 1: Install Python
 
 1. Go to **[python.org/downloads](https://www.python.org/downloads/)**.
@@ -113,7 +117,7 @@ The notebooks live in a public GitHub repository, so anyone with the link can do
    - Find the downloaded ZIP file (usually in your Downloads folder) and extract/unzip it. On Windows, right-click it and choose **Extract All**. On Mac, just double-click it.
    - Remember where you extracted it — you'll open this folder in VS Code next.
 
-   **Option B — Clone with git (if you already have git installed):**
+   **Option B — Clone with git (if you already understand Git and have it installed):**
    - Open a terminal (see Step 1 for how).
    - Navigate to where you want the folder to live, e.g.:
      ```
@@ -127,14 +131,13 @@ The notebooks live in a public GitHub repository, so anyone with the link can do
 
 All the files you need — including `folio-notebooks-requirements.txt` and every notebook — sit directly in the root of the downloaded folder, so no need to hunt through subfolders.
 
-**A quick note on which notebook to open first:** Once everything's installed (Steps 5–7 below), open `folio_auth.ipynb` before any of the others — that's where you'll enter your FOLIO login credentials. Then run `folio_auth_test.ipynb` to confirm you authenticated successfully. Only after that should you move on to the report notebooks (`fines and fees report.ipynb`, `instance records creation stats.ipynb`, or `shelf list by location.ipynb`).
 
 ---
 
-### Step 5: Open the folder in VS Code
+### Step 5: Open the Notebooks folder in VS Code
 
 1. In VS Code, go to **File > Open Folder**.
-2. Select the folder you extracted or cloned in Step 4 — the one that contains the notebook file(s) and `folio-notebooks-requirements.txt`.
+2. Select the folder you extracted or cloned in Step 4. The default name is "Intro-to-FOLIO-APIS---Jupyter-Notebooks-main"
 3. If VS Code asks whether you trust the authors of this folder, click **Yes, I trust the authors**.
 
 ---
@@ -163,34 +166,50 @@ You'll use this to install the required libraries.
    ```
 5. If you get a "file not found" error, double check you're in the right folder and that the requirements file is actually named and located where you expect — see the note at the end of Step 4.
 
-**I'm not certain which exact error message your system will show if something goes wrong** — error text varies by operating system and Python version. If you hit an error not covered here, copy the exact error text and search for it, or ask for help with the exact message.
+**I'm not certain which exact error message your system will show if something goes wrong** — error text varies by operating system and Python version. If you hit an error not covered here, copy the exact error text and search for it, or ask for help from someone at your organization
 
 ---
 
-### Step 8: Open a notebook
+### Step 8: Open the folio_auth notebook
 
-1. In the **Explorer** panel on the left (the file list), click on the `.ipynb` file you want to open.
+1. In the **Explorer** panel on the left (the file list), click on the `folio_auth.ipynb` file you want to open.
 2. VS Code will display it as a notebook: a series of "cells" you can run one at a time, rather than as a plain text file.
 
 ---
 
-### Step 9: Select a kernel
+### Step 9: Add your Login information
+
+Update the folio_auth.ipynb with your username, tenant ID, and FOLIO API url (in the "/settings/about" section of your FOLIO tenant). If you know how to add your password to your operating system's environment variables, add that under the name "FOLIO_PASSWORD" 
+![screenshot of placeholder login credentials](images/login-creds.png)
+
+### Step 10: Select a kernel (if asked)
 
 The "kernel" is the Python environment that will actually run your code.
-
 1. In the top-right corner of the notebook, you'll see a button (it may say **Select Kernel**, or show a Python version number if one is already chosen).
-2. Click it.
+![screenshot of Python Kernel 3.12.10 selected](images/kernel-screenshot.png)
+2. Click the button.
 3. Choose **Python Environments**, then select the Python version you installed in Step 1.
 4. If you're prompted to install something called `ipykernel`, click **Install** — this is a small, standard package required to connect Python to the notebook and is expected the first time you do this.
 
 ---
 
-### Step 10: Run the notebook
+### Step 11: Run the auth_login notebook
 
-1. Hover over a code cell — a small **play (▶) button** appears on its left edge.
+1. Hover over the code cell — a small **play (▶) button** appears on its left edge.
 2. Click it to run that cell.
 3. The output (if any) appears directly below the cell.
 4. Repeat for each cell, top to bottom, or use **Run All** from the toolbar at the top of the notebook to run every cell in order.
+
+Look for the "Login successful. Token retrieved" message to indicate you have logged in successfully. 
+
+---
+
+### Step 12: Call the auth_login notebook from another notebook
+
+1. Open the `folio_auth_test.ipynb` notebook.
+2. Use the **Run All** command. If the `folio_auth` notebook is called successfully, you will see the results of a simple call on the screen: a total number of Instance records in your FOLIO Inventory. 
+
+Congratulations! Now you can explore and run the other notebooks in this collection, or use them as a template to make your own. 
 
 ---
 
