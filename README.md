@@ -2,27 +2,27 @@
 
 This guide has two parts:
 
-- **Part 1: Quick Start** — a condensed checklist for people who've coded before and just need the order of operations.
-- **Part 2: Detailed Steps** — full instructions for people who have never coded before, with fuller explanations.
+- **Section I: Quick Start** — a condensed checklist for people who've coded before and just need the order of operations.
+- **Section II: Detailed Steps** — full instructions for people who have never coded before, with fuller explanations.
 
 **A note on computer access:** You'll need local admin access on the computer you're using to install Python and VS Code. If this is a work computer and you don't have admin rights, check with your IT department before starting — without it, the installers in Steps 1 and 2 may fail or be blocked.
 
 **A note on accuracy:** Software interfaces change over time. These steps reflect how VS Code, Python, and the relevant extensions work as of mid-2026, but menu names or button positions may look slightly different by the time you read this. If a step doesn't match what you see on screen, that's the most likely reason.
 
-**A note on the repository link:** The notebooks live at `https://github.com/ChristineMcClureEBSCO/Intro-to-FOLIO-APIS---Jupyter-Notebooks`. All files sit in the root of the repo (no subfolders), including:
+**A note on the repository link:** The notebooks live in this repository: `https://github.com/ChristineMcClureEBSCO/Intro-to-FOLIO-APIS---Jupyter-Notebooks`. All files sit in the root of the repo (no subfolders), including:
 - `README.md`
-- `fines and fees report.ipynb`
 - `folio-notebooks-requirements.txt`
 - `folio_auth.ipynb`
 - `folio_auth_test.ipynb`
-- `instance records creation stats.ipynb`
-- `shelf list by location.ipynb`
 
-**Suggested order for running the notebooks:** You will need to first edit the settings in `folio_auth.ipynb` to include your FOLIO login credentials and tenant information. When that is complete, run the `folio_auth_test.ipynb` notebook. This is a short script to confirm you authenticated correctly, before moving on to any of the report notebooks.
+and the custom reports and summaries that were created for the FOLIO community. 
+
+
+**Logging in :** You must  first edit the settings in **`folio_auth.ipynb`** to include your FOLIO login credentials and tenant information. When that is complete, run the **`folio_auth_test.ipynb`** notebook. This is a short script to confirm you authenticated correctly, before moving on to any of the report notebooks.
 
 ---
 
-## Part 1: Quick Start
+## Section 1: Quick Start
 
 For readers already comfortable with Python, git, and code editors. Order of operations only — see Part 2 for explanations.
 
@@ -40,11 +40,11 @@ For readers already comfortable with Python, git, and code editors. Order of ope
 8. Select a kernel (top-right of the notebook) — pick the Python interpreter you just installed the requirements into. Install `ipykernel` if prompted.
 9. Run cells individually (▶ on each cell) or use **Run All**.
 
-If anything above is unfamiliar, jump to the matching step in Part 2.
+If anything above is unfamiliar, jump to the matching step in Section 2.
 
 ---
 
-## Part 2: Detailed Steps
+## Section 2: Detailed Steps
 
 A step-by-step guide for people new to coding. Follow these steps in order — don't skip ahead.
 
