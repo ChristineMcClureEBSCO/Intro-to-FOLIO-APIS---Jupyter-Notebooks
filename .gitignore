@@ -2,3 +2,4 @@ __pycache/**
 /__pycache__
 *.csv
 folio_auth*
+folio_auth.ipynb
