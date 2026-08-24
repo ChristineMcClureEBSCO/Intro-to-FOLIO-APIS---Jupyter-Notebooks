@@ -1,3 +1,4 @@
 __pycache/**
 /__pycache__
 *.csv
+folio_auth*
